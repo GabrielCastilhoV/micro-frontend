@@ -1,0 +1,16 @@
+{
+  "name": "micro-frontend-with-vite-federation-react",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm  --parallel --filter \"./**\" build",
+    "preview": "pnpm  --parallel --filter \"./**\" preview",
+    "dev": "pnpm --parallel run build && pnpm --parallel run preview"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.1.10"
+  }
+}
